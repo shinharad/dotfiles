@@ -9,3 +9,7 @@ set columns=180
 colorscheme molokai
 
 set background=dark
+
+" ツリーを常に表示するか
+autocmd VimEnter * execute 'NERDTree'
+

@@ -129,7 +129,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('Shougo/neosnippet-snippets')
 
   call dein#add('scrooloose/nerdtree')
-  call dein#add('terryma/vim-multiple-cursors')
+  call dein#add('terryma/vim-multiple-cursors') " Ctrl+nで複数選択
+  " テーマ
   call dein#add('tomasr/molokai')
   call dein#add('w0ng/vim-hybrid')
 

@@ -1,11 +1,7 @@
-" Fontの設定
-set guifont=Ricty\ Diminished\ Regular:h14
-
-" 色の設定===============
-"colorscheme evening
-"colorscheme hybrid
-syntax enable
+" ウィンドウの縦幅
+set lines=55
+" ウィンドウの横幅
+set columns=180
+" カラースキーム
+colorscheme koehler
 set background=dark
-colorscheme solarized
-let g:solarized_termcolors=256
-

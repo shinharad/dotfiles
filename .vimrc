@@ -114,7 +114,7 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/Users/haradashinichi/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
 if dein#load_state('~/.cache/dein')
@@ -129,6 +129,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('Shougo/neosnippet-snippets')
 
   call dein#add('scrooloose/nerdtree')
+  call dein#add('terryma/vim-multiple-cursors')
+  call dein#add('tomasr/molokai')
   call dein#add('w0ng/vim-hybrid')
 
   " You can specify revision/branch/tag.
@@ -147,7 +149,6 @@ syntax enable
 if dein#check_install()
   call dein#install()
 endif
-
 
 " =========================================================================
 " NeoBundle 
@@ -171,4 +172,7 @@ endif
 " :NERDTreeのショートカット（Ctrl+e）
 nnoremap <silent><C-e> :NERDTree<CR> 
 
+" =========================================================================
+" カラーテーマ
+colorscheme molokai
 

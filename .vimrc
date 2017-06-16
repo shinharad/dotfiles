@@ -37,6 +37,8 @@ set clipboard+=unnamed,unnamedplus
 " バッファをキーで移動
 map <F2> <ESC>:bp<CR>
 map <F3> <ESC>:bn<CR>
+" 自動的にインデントする
+set autoindent
 
 
 " =========================================================================
@@ -55,6 +57,13 @@ set number
 set cursorline
 " Tab文字の表示幅
 set tabstop=2
+" 対応括弧の瞬間強調時間
+set matchtime=3
+" タブを空白で入力する
+set expandtab
+
+
+
 
 
 " =========================================================================

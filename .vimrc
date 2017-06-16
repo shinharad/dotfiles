@@ -30,6 +30,7 @@ nnoremap k gk
 " 削除でレジスタに格納しない
 nnoremap x "_x
 nnoremap dd "_dd
+
 " 循環検索をOFF
 set nowrapscan
 " ヤンクしたテキストをそのままクリップボードにコピー
@@ -39,7 +40,6 @@ map <F2> <ESC>:bp<CR>
 map <F3> <ESC>:bn<CR>
 " 自動的にインデントする
 set autoindent
-
 
 " =========================================================================
 " 検索系
@@ -61,9 +61,6 @@ set tabstop=2
 set matchtime=3
 " タブを空白で入力する
 set expandtab
-
-
-
 
 
 " =========================================================================
@@ -121,9 +118,15 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'w0ng/vim-hybrid'
 
 call neobundle#end()
 filetype plugin indent on
 
 NeoBundleCheck
+
+" =========================================================================
+" :NERDTreeのショートカット（Ctrl+e）
+nnoremap <silent><C-e> :NERDTree<CR> 
+
 

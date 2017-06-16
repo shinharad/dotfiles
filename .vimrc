@@ -63,7 +63,6 @@ set matchtime=3
 set expandtab
 
 
-" =========================================================================
 " ステータスエリア関係
 "ステータスのところにファイル情報表示
 set statusline=%<[%n]%F%=\ %m%r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}\ %l,%c\ %P
@@ -106,6 +105,23 @@ function! s:GetHighlight(hi)
 endfunction
 """"""""""""""""""""""""""""""""""""""""""""
 
+""""""""""""""""""""""""""""""
+" 全角スペースの表示
+""""""""""""""""""""""""""""""
+function! ZenkakuSpace()
+    highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
+endfunction
+
+if has('syntax')
+    augroup ZenkakuSpace
+        autocmd!
+        autocmd ColorScheme * call ZenkakuSpace()
+        autocmd VimEnter,WinEnter,BufRead * let w:m1=matchadd('ZenkakuSpace', '　')
+    augroup END
+    call ZenkakuSpace()
+endif
+""""""""""""""""""""""""""""""
+
 
 " =========================================================================
 " dein.vim
@@ -132,7 +148,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('terryma/vim-multiple-cursors') " Ctrl+nで複数選択
   " テーマ
   call dein#add('tomasr/molokai')
-  call dein#add('w0ng/vim-hybrid')
+  "call dein#add('w0ng/vim-hybrid')
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -152,26 +168,9 @@ if dein#check_install()
 endif
 
 " =========================================================================
-" NeoBundle 
-"set nocompatible
-"if has('vim_starting')
-"  set runtimepath+=~/.vim/bundle/neobundle.vim
-"endif
-"call neobundle#begin(expand('~/.vim/bundle/'))
-"NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-"NeoBundle 'scrooloose/nerdtree'
-"NeoBundle 'w0ng/vim-hybrid'
-
-"call neobundle#end()
-"filetype plugin indent on
-
-"NeoBundleCheck
-
-" =========================================================================
 " :NERDTreeのショートカット（Ctrl+e）
 nnoremap <silent><C-e> :NERDTree<CR> 
+
 
 " =========================================================================
 " カラーテーマ

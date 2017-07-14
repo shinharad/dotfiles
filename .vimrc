@@ -82,7 +82,7 @@ nnoremap j gj
 nnoremap k gk
 " 削除でレジスタに格納しない
 nnoremap x "_x
-nnoremap dd "_dd
+"nnoremap dd "_dd
 
 " 循環検索をOFF
 set nowrapscan

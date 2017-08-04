@@ -1,0 +1,6 @@
+
+" 検索時のハイライト
+set hlsearch
+
+" クリップボードレジスタ共有
+set clipboard=unnamed

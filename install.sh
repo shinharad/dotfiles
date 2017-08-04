@@ -3,4 +3,5 @@
 ln -f .gitignore ~/.gitignore
 ln -f .vimrc ~/.vimrc
 ln -f .gvimrc ~/.gvimrc
+ln -f .ideavimrc ~/.ideavimrc
 

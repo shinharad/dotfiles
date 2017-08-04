@@ -4,3 +4,6 @@ set hlsearch
 
 " クリップボードレジスタ共有
 set clipboard=unnamed
+
+" 削除でレジスタに格納しない
+nnoremap x "_x

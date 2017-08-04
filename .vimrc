@@ -32,6 +32,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('terryma/vim-multiple-cursors')
   " テーマ
   call dein#add('tomasr/molokai')
+  "call dein#add('ujihisa/unite-colorscheme')
+  "call dein#add('altercation/vim-colors-solarized')
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -93,7 +95,10 @@ map <F2> <ESC>:bp<CR>
 map <F3> <ESC>:bn<CR>
 " 自動的にインデントする
 set autoindent
-
+" Insertモードのときカーソルの形状を変更
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+inoremap <Esc> <Esc>
 
 
 " =========================================================================
@@ -118,6 +123,9 @@ set matchtime=3
 set expandtab
 " カラーテーマ
 colorscheme molokai
+"colorscheme hybrid 
+"colorscheme solarized
+
 
 " ステータスエリア関係
 "ステータスのところにファイル情報表示

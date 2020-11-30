@@ -2,3 +2,8 @@
 
 *.iml
 .idea
+
+.bloop/
+.dotty-ide*
+.metals/
+metals.sbt
